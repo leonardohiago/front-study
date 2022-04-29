@@ -66,20 +66,36 @@ export const LoginBox = styled.div`
   }
 `;
 
-export const GoogleButton = styled.button`
-  width: 424px;
-  height: 64px;
-  background: ${({ theme }) => theme.colors.secundary.main};
-  color: ${({ theme }) => theme.colors.primary.main};
-  font-weight: bold;
-  font-size: 28px;
-  padding: 8px 0px;
-  border: none;
-  margin-bottom: 32px;
+export const ButtonTheme = styled.div`
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.secundary.main};
-    background: ${({ theme }) => theme.colors.primary.main};
-    transition: all ease-in-out 0.4s;
+  .googleButton {
+    width: 424px;
+    height: 64px;
+    background: ${({ theme }) => theme.colors.secundary.main} !important;
+    color: ${({ theme }) => theme.colors.primary.main} !important;
+    padding: 8px 0px !important;
+    border: none !important;
+    margin-bottom: 32px !important;
+
+    span {
+      margin-left: 50px;
+      font-size: 28px !important;
+      font-weight: bold !important;
+    }
+
+    div {
+      display: none;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.secundary.main} !important;
+      background: ${({ theme }) => theme.colors.primary.main} !important;
+      transition: all ease-in-out 0.4s !important;
+      font-weight: bold !important;
+    }
   }
 `;
