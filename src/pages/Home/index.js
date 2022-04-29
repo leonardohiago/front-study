@@ -43,7 +43,7 @@ const matters = [
   }
 ];
 
-export default function LandingPage() {
+export default function Home() {
   return (
     <Container>
       <Header>

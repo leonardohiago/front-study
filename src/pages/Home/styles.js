@@ -172,12 +172,14 @@ export const LastCall = styled.div`
     color: #FFF;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
     padding: 16px 24px;
+    width: 210px;
+    transition: width 0.4s;
     background: ${({ theme }) => theme.colors.secundary.main};
 
     &:hover {
-      font-size: 18px;
-      transition: all ease-in-out 0.4s ;
+      width: 230px;
       background: #FFF;
       color: ${({ theme }) => theme.colors.secundary.main};
     }
