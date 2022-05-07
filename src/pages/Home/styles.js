@@ -4,6 +4,11 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
+
+  span {
+    color: ${({ theme }) => theme.colors.primary.main};
+    text-decoration: underline;
+  }
 `;
 
 export const Header = styled.header`
@@ -54,8 +59,23 @@ export const Main = styled.div`
 
   p {
     max-width: 472px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     text-transform: none;
+  }
+
+  a {
+    padding: 10px 16px;
+    background: ${({ theme }) => theme.colors.primary.main};
+    color: ${({ theme }) => theme.colors.secundary.dark};
+    text-transform: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s;
+
+    &:hover {
+      padding: 10px 20px;
+      background: #FFF;
+    }
   }
 `;
 
@@ -174,14 +194,17 @@ export const LastCall = styled.div`
     text-decoration: none;
     text-align: center;
     padding: 16px 24px;
-    width: 210px;
-    transition: width 0.4s;
     background: ${({ theme }) => theme.colors.secundary.main};
+    transition: all 0.6s;
 
     &:hover {
-      width: 230px;
+      padding: 16px 28px;
       background: #FFF;
       color: ${({ theme }) => theme.colors.secundary.main};
+    }
+
+    .underline {
+      color: ${({ theme }) => theme.colors.primary.dark};
     }
   }
 `;

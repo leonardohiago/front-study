@@ -56,15 +56,29 @@ export default function Home() {
       </Header>
       <Main>
         <div>
-          <h1>Aprenda programação front-end do zero.</h1>
+          <h1>
+            Aprenda programação
+            {' '}
+            <span>front-end</span>
+            {' '}
+            do
+            {' '}
+            <span>zero</span>
+            .
+          </h1>
           <p>{description}</p>
+          <a href="/login">Estudar Agora</a>
         </div>
         <div>
           <img src={persona} alt="Homem sorrindo segurando um notebook em sua mão" />
         </div>
       </Main>
       <WhatLearn>
-        <h2 className="title">O que você irá aprender?</h2>
+        <h2 className="title">
+          O que você irá &nbsp;
+          <span>aprender</span>
+          ?
+        </h2>
         <MatterCardList>
           {matters.map((matter) => (
             <MatterCard
@@ -78,7 +92,10 @@ export default function Home() {
         </MatterCardList>
       </WhatLearn>
       <CommonQuestions>
-        <h2 className="title">Perguntas Frequentes</h2>
+        <h2 className="title">
+          <span>Perguntas</span>
+          &nbsp; Frequentes
+        </h2>
         <QuestionList>
           <Question>
             <p>O que eu preciso saber para fazer o curso?</p>
