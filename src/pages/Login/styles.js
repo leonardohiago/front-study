@@ -30,6 +30,11 @@ export const LoginText = styled.div`
     font-size: 40px;
     margin-bottom: 24px;
   }
+
+  span {
+    color: ${({ theme }) => theme.colors.primary.main};
+    text-decoration: underline;
+  }
 `;
 
 export const LoginBox = styled.div`

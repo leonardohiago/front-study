@@ -20,6 +20,11 @@ export const Title = styled.div`
   }
 `;
 
+export const Underline = styled.span`
+  color: ${({ theme }) => theme.colors.primary.main};
+  text-decoration: underline;
+`;
+
 export const CourseList = styled.div`
   margin: 64px 32px;
   display: flex;
@@ -36,17 +41,22 @@ export const CourseList = styled.div`
 `;
 
 export const Course = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: ${({ theme }) => theme.colors.secundary.dark};
-  width: 880px;
-  height: 96px;
-  padding: 16px 24px;
-  transition: width 0.4s;
-  cursor: pointer;
 
-  &:hover {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: ${({ theme }) => theme.colors.secundary.dark};
+    width: 880px;
+    height: 96px;
+    padding: 16px 24px;
+    transition: width 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
     width: 900px;
     background: ${({ theme }) => theme.colors.primary.main};
 
