@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import {
   Container, Header, Main, WhatLearn, MatterCard, MatterCardList, CommonQuestions,
   QuestionList, Question, LastCall, Footer
@@ -49,10 +51,10 @@ export default function Home() {
       <Header>
         <img src={logo} alt="Logotipo FrontStudy" />
         <span className="material-icons-outlined" />
-        <a href="/login">
+        <Link to="/login">
           <img src={login} alt="Ícone de representação do login" />
           Entrar
-        </a>
+        </Link>
       </Header>
       <Main>
         <div>
@@ -67,7 +69,7 @@ export default function Home() {
             .
           </h1>
           <p>{description}</p>
-          <a href="/login">Estudar Agora</a>
+          <Link to="/login">Estudar Agora</Link>
         </div>
         <div>
           <img src={persona} alt="Homem sorrindo segurando um notebook em sua mão" />
@@ -111,9 +113,9 @@ export default function Home() {
       <LastCall>
         <h3 className="title">O que você está esperando?</h3>
         <p>{lastCallDescription}</p>
-        <a href="/login">
+        <Link to="/login">
           Estudar Agora
-        </a>
+        </Link>
       </LastCall>
       <Footer>
         <img className="teste" src={logo} alt="Logotipo FrontStudy localizado no rodapé da página" />

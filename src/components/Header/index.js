@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { Container, HeaderAplication } from './styles';
 
 import logo from '../../assets/images/logo-frontstudy.svg';
@@ -8,10 +10,10 @@ export default function Header() {
     <Container>
       <HeaderAplication>
         <img src={logo} alt="Logotipo FrontStudy" />
-        <a href="/">
+        <Link to="/">
           <img src={logout} alt="Ícone de representação do logout" />
           Sair
-        </a>
+        </Link>
       </HeaderAplication>
     </Container>
   );

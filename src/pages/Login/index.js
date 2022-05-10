@@ -1,4 +1,5 @@
 import GoogleLogin from 'react-google-login';
+import { Link } from 'react-router-dom';
 import {
   Container, LoginText, LoginBox, ButtonTheme
 } from './styles';
@@ -18,7 +19,13 @@ export default function Login() {
     <Container>
       <LoginText>
         <img src={logo} alt="Logotipo FrontStudy" />
-        <h1>Realize seu login na plataforma</h1>
+        <h1>
+          Realize seu
+          {' '}
+          <span>login</span>
+          {' '}
+          na plataforma
+        </h1>
         <p>{description}</p>
       </LoginText>
       <LoginBox>
@@ -32,10 +39,10 @@ export default function Login() {
             onFail={responseGoogle}
           />
         </ButtonTheme>
-        <a href="/">
+        <Link to="/">
           <img src={exit} alt="Seta apontando para o lado esquerdo sinalizando o botão de voltar" />
           Voltar
-        </a>
+        </Link>
       </LoginBox>
     </Container>
   );
