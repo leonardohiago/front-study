@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import GoogleLogin from 'react-google-login';
 import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
 import {
   Container, LoginText, LoginBox, ButtonTheme
 } from './styles';
@@ -7,11 +9,19 @@ import {
 import logo from '../../assets/images/logo-frontstudy.svg';
 import exit from '../../assets/images/icons/exit.svg';
 
+import { UserContext } from '../../contexts/GlobalContext';
+
 const description = 'É necessário apenas realizar a autenticação com sua conta Google, garantindo assim um acesso rápido e seguro.';
 
 function responseGoogle(response) {
-  // eslint-disable-next-line no-console
-  console.log(response);
+  if (response.googleId) {
+    // const user = React.useContext(UserContext);
+    // user.user = response;
+    window.redirect('/courses');
+  } else {
+    // eslint-disable-next-line no-alert
+    alert('Não Conseguimos Realizar a Autenticação.');
+  }
 }
 
 export default function Login() {
